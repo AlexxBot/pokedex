@@ -44,8 +44,6 @@ class _PokemonDetailWidgetState extends State<PokemonDetailWidget>
               vertical: SizeConfig().vPadding,
               horizontal: SizeConfig().hPadding),
           child: TabBar(
-              //isScrollable: true,
-
               controller: _tabController,
               indicator: BoxDecoration(
                   borderRadius: BorderRadius.circular(
