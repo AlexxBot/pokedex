@@ -16,9 +16,9 @@ class TypesColors {
       case 'fire':
         return Colors.red.withOpacity(0.9);
       case 'normal':
-        return Colors.yellowAccent.withOpacity(0.9);
+        return Colors.amber.withOpacity(1);
       case 'bug':
-        return Colors.lightGreenAccent.withOpacity(0.9);
+        return Colors.greenAccent.withOpacity(0.9);
       case 'water':
         return Colors.blueAccent.withOpacity(0.9);
       case 'poison':
@@ -30,7 +30,7 @@ class TypesColors {
       case 'ground':
         return Colors.brown.withOpacity(0.9);
       case 'electric':
-        return Colors.yellowAccent.withOpacity(0.9);
+        return Colors.yellow.withOpacity(1);
       case 'fairy':
         return Colors.pink.withOpacity(0.9);
       default:

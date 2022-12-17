@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:pokedex/core/config/router.dart';
 import 'package:pokedex/core/config/size_config.dart';
 import 'package:pokedex/core/config/theme.dart';
@@ -19,6 +20,7 @@ class PokemonItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    timeDilation = 2.5;
     return InkWell(
         onTap: () => _showDetail(context),
         child: Container(
