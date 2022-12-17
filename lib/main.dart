@@ -7,6 +7,7 @@ import 'package:pokedex/injections.dart';
 import 'package:pokedex/pokedex_app.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await init();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
