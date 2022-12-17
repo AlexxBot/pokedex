@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex/features/pokemon/domain/entities/pokemon_detail.dart';
 import 'package:pokedex/features/pokemon/presentation/pages/pokemon_detail_page.dart';
 import 'package:pokedex/features/pokemon/presentation/pages/pokemon_page.dart';
 
@@ -13,8 +14,11 @@ class RouteGenerator {
       case pokemonPage:
         return MaterialPageRoute(builder: (_) => const PokemonPage());
       case pokemonDetailPage:
-        //final navBarItem = settings.arguments as NavBarItem;
-        return MaterialPageRoute(builder: (_) => const PokemonDetailPage());
+        final pokemonDetail = settings.arguments as PokemonDetail;
+        return MaterialPageRoute(
+            builder: (_) => PokemonDetailPage(
+                  detail: pokemonDetail,
+                ));
 
       default:
         return MaterialPageRoute(builder: (_) => const PokemonPage());

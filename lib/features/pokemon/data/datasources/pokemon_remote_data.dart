@@ -26,11 +26,8 @@ class PokemonRemoteDataImple extends PokemonRemoteData {
             onTimeout: () => throw TimeOutException());
     if (response.statusCode == 200) {
       final pokemonListJson = jsonDecode(response.body);
-      //final listPokemons = listJson['results'];
       final pokemonList = PokemonList.fromJson(pokemonListJson);
-      /*  final List<Pokemon> list = listPokemons
-          .map<Pokemon>((pokemon) => Pokemon.fromJson(pokemon))
-          .toList(); */
+
       final n = pokemonList.list.length;
       for (int i = 0; i < n; i++) {
         pokemonList.list[i].detail = await getPokemon(pokemonList.list[i].url);

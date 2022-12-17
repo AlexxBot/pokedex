@@ -1,6 +1,6 @@
 class Application {
   static bool debug = false;
-  static String title = "Antapaccay news";
+  static String title = "Pokedex";
 
   static final Application _instance = Application._internal();
 

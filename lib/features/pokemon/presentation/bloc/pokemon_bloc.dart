@@ -17,6 +17,6 @@ class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
     emit(LoadingState());
     final response = await useCase.getList(event.url);
     response.fold((failure) => emit(ErrorState(message: failure.message)),
-        (pokemonList) => pokemonList);
+        (pokemonList) => emit(PokemonListedState(pokemonList: pokemonList)));
   }
 }

@@ -18,13 +18,31 @@ dependencies:
   connectivity: ^3.0.6
   flutter_svg: ^1.1.6
   http: ^0.13.5
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.11.0
+
+flutter_icons:
+
+  image_path: "assets/images/pok copy.png"
+  android: true
+  ios: true
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/pok.png
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Medium.ttf
+    #- family: sora
+    #  fonts:
+    #    - asset: assets/fonts/Sora-VariableFont_wght.ttf
 
   

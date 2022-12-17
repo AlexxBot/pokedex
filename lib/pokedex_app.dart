@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/core/config/application.dart';
 import 'package:pokedex/core/config/router.dart';
+import 'package:pokedex/core/config/theme.dart';
 
 class PokedexApp extends StatefulWidget {
   const PokedexApp({super.key});
@@ -29,6 +30,7 @@ class _PokedexAppState extends State<PokedexApp> {
       navigatorKey: _navigatorKey,
       debugShowCheckedModeBanner: Application.debug,
       title: Application.title,
+      theme: AppTheme().theme,
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
