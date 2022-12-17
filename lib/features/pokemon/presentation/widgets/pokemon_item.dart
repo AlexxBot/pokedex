@@ -59,9 +59,9 @@ class PokemonItemWidget extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(
                     top: SizeConfig().vPadding * 6,
-                    left: SizeConfig().hPadding * 10),
+                    left: SizeConfig().hPadding * 12),
                 child: Hero(
-                  tag: 'pokemon',
+                  tag: pokemon.name,
                   child: SvgWidget(
                     height: 150,
                     imageUrl: pokemon.detail!.sprites!.dreamWorld,
