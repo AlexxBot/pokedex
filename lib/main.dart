@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pokedex/core/config/size_config.dart';
 import 'package:pokedex/features/pokemon/presentation/bloc/pokemon_bloc.dart';
@@ -7,7 +8,10 @@ import 'package:pokedex/pokedex_app.dart';
 
 void main() async {
   await init();
-  runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {

@@ -58,7 +58,7 @@ class PokemonPortratWidget extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Hero(
-                tag: 'pokemon',
+                tag: detail.name,
                 child: SvgWidget(
                     height: MediaQuery.of(context).size.width - 130,
                     imageUrl: detail.sprites!.dreamWorld!),
