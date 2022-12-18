@@ -94,14 +94,15 @@ class _PokemonPageState extends State<PokemonPage> {
           if (state is LoadingState && url == null) {
             return const Center(child: CupertinoActivityIndicator());
           }
-          return RefreshIndicator(
+          return /* RefreshIndicator(
               onRefresh: _reloadList,
-              child: PokemonListWidget(
-                list: list,
-                controller: _scrollController,
-                maxCount: count,
-                getMoreData: _getMoreData,
-              ));
+              child:  */
+              PokemonListWidget(
+            list: list,
+            controller: _scrollController,
+            maxCount: count,
+            getMoreData: _getMoreData,
+          ) /* ) */;
         },
       )),
     );
